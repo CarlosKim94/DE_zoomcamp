@@ -5,3 +5,16 @@ docker run -it --rm \
     -v ny_taxi_postgres_data:/var/lib/postgresql \
     -p 5433:5432 \
     postgres:18
+
+Once above code is running, start ingesting data
+
+uv run python ingest_data.py \
+  --pg-user=root \
+  --pg-pass=root \
+  --pg-host=localhost \
+  --pg-port=5433 \
+  --pg-db=ny_taxi \
+  --target-table=ny_taxi_trips \
+  --year=2021 \
+  --month=1 \
+  --chunksize=100000

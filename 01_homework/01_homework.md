@@ -17,8 +17,10 @@ Answer: hostname = db, port = 5432
 #### Prepare the Data
 
 Download the green taxi trips data for November 2025:
+
 `wget https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2025-11.parquet`
 You will also need the dataset with zones:
+
 `wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_zone_lookup.csv`
 
 ## Question 3. Counting short trips
